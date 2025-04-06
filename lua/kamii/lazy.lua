@@ -19,6 +19,7 @@ local plugins = {
     -- Themes
     {'ellisonleao/gruvbox.nvim'},
     {'rose-pine/neovim', name = 'rose-pine'},
+    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
     -- Lsp
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},

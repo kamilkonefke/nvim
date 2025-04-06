@@ -3,7 +3,10 @@ local lsp = require('lsp-zero')
 local lspconfig = require('lspconfig')
 lspconfig.clangd.setup{}
 lspconfig.rust_analyzer.setup{}
+lspconfig.pyright.setup{}
 lspconfig.gopls.setup{}
+lspconfig.astro.setup{}
+lspconfig.ols.setup{}
 
 -- Keybinds
 local cmp = require('cmp')
@@ -22,10 +25,11 @@ lsp.set_preferences({
 
 lsp.setup()
 
-require'lsp_signature'.setup({
-	warp = false,
-	hint_enable = false,
-	handler_opts = {
-		border = "none",
-	}
+require('lsp_signature').setup({
+    floating_window = false,
+    hint_enable = true,
+    hint_prefix = "λ ",
+    handler_opts = {
+        border = "none"
+    },
 })
