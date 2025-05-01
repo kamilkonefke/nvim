@@ -1,12 +1,15 @@
 local lsp = require('lsp-zero')
 -- Setup language servers
 local lspconfig = require('lspconfig')
-lspconfig.clangd.setup{}
-lspconfig.rust_analyzer.setup{}
+lspconfig.clangd.setup{
+    cmd = {"clangd", "--completion-style=bundled", "--header-insertion=never", "--background-index=true", "--suggest-missing-includes"},
+}
+-- lspconfig.rust_analyzer.setup{}
+-- lspconfig.zls.setup{}
+-- lspconfig.ols.setup{}
 lspconfig.pyright.setup{}
-lspconfig.gopls.setup{}
-lspconfig.astro.setup{}
-lspconfig.ols.setup{}
+-- lspconfig.gopls.setup{}
+-- lspconfig.astro.setup{}
 
 -- Keybinds
 local cmp = require('cmp')
@@ -17,6 +20,17 @@ cmp.setup({
         ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
         ['<C-y>'] = cmp.mapping.confirm({ select = true }),
     },
+    performance = {
+        max_view_entries = 15,
+    },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
+})
+
+vim.diagnostic.config({
+    virtual_text = true,
 })
 
 lsp.set_preferences({
