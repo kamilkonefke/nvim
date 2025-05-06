@@ -12,7 +12,7 @@ require('gruber-darker').setup{
 }
 
 function ColorMyPencils()
-	vim.cmd.colorscheme('gruber-darker')
+	vim.cmd.colorscheme('rose-pine')
 end
 
 ColorMyPencils()

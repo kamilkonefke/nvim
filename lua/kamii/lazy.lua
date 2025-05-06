@@ -21,6 +21,7 @@ local plugins = {
     {'rose-pine/neovim', name = 'rose-pine'},
     { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
     { "blazkowolf/gruber-darker.nvim" },
+    { "EdenEast/nightfox.nvim" },
 
     -- Lsp
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
@@ -31,7 +32,8 @@ local plugins = {
     {'ray-x/lsp_signature.nvim'},
     
     -- Telescope
-    {'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' }},}
+    {'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' }},
+}
 
 local opts = {}
 
