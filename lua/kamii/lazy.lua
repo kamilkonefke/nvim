@@ -14,14 +14,11 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
     {'windwp/nvim-autopairs'},
-    {'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}},
 
     -- Themes
     {'ellisonleao/gruvbox.nvim'},
     {'rose-pine/neovim', name = 'rose-pine'},
-    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-    { "blazkowolf/gruber-darker.nvim" },
-    { "EdenEast/nightfox.nvim" },
+    {'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}},
 
     -- Lsp
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
