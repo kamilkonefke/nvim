@@ -14,10 +14,16 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
     {'windwp/nvim-autopairs'},
+    {'ThePrimeagen/vim-be-good'},
+
+    -- Html
+    {'windwp/nvim-ts-autotag'},
+
 
     -- Themes
     {'ellisonleao/gruvbox.nvim'},
     {'rose-pine/neovim', name = 'rose-pine'},
+    { "blazkowolf/gruber-darker.nvim" },
     {'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}},
 
     -- Lsp
@@ -27,7 +33,7 @@ local plugins = {
     {'hrsh7th/nvim-cmp'},
     {'L3MON4D3/LuaSnip'},
     {'ray-x/lsp_signature.nvim'},
-    
+
     -- Telescope
     {'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' }},
 }

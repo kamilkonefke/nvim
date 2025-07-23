@@ -1,6 +1,12 @@
 require('telescope').setup {
     extensions = {
         fzf = {}
+    },
+    defaults = {
+        file_ignore_patterns = {
+            "out",
+            "build",
+        }
     }
 }
 require('telescope')
