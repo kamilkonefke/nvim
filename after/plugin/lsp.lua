@@ -2,11 +2,10 @@ local lsp = require('lsp-zero')
 local lspconfig = require('lspconfig')
 
 -- lsp's
-lspconfig.clangd.setup{ cmd = { "clangd", "--completion-style=bundled", "--background-index=true", "--suggest-missing-includes" } }
+lspconfig.clangd.setup{ cmd = { "clangd", "--completion-style=bundled", "--background-index=true", "--suggest-missing-includes" }}
 lspconfig.zls.setup{}
-lspconfig.pyright.setup{}
 lspconfig.gopls.setup{}
-lspconfig.lua_ls.setup{}
+lspconfig.pyright.setup{}
 
 require('nvim-autopairs').setup()
 

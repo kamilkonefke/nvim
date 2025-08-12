@@ -11,4 +11,3 @@ cmp.setup({
         max_view_entries = 20,
     },
 })
-

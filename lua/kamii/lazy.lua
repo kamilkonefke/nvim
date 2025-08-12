@@ -19,7 +19,6 @@ local plugins = {
     -- Html
     {'windwp/nvim-ts-autotag'},
 
-
     -- Themes
     {'ellisonleao/gruvbox.nvim'},
     {'rose-pine/neovim', name = 'rose-pine'},
@@ -28,11 +27,13 @@ local plugins = {
 
     -- Lsp
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+    {'ray-x/lsp_signature.nvim'},
     {'neovim/nvim-lspconfig'},
     {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/cmp-buffer'},
     {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-path'},
     {'L3MON4D3/LuaSnip'},
-    {'ray-x/lsp_signature.nvim'},
 
     -- Telescope
     {'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' }},
