@@ -10,4 +10,9 @@ cmp.setup({
     performance = {
         max_view_entries = 20,
     },
+    sources = {
+        { name = 'nvim_lsp' },
+        { name = 'buffer' },
+        { name = 'path' },
+    },
 })
