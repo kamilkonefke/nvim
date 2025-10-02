@@ -1,6 +1,6 @@
 local lsps = {
     { 'clangd', { cmd = { "clangd", "--completion-style=bundled", "--background-index=true", "--suggest-missing-includes" } } },
-    { 'zls' }, { 'ols' }, { 'gopls' }, { 'pyright' }, { 'astro' },
+    { 'zls' }, { 'ols' }, { 'rust-analyzer' }, { 'gopls' }, { 'pyright' }, { 'astro' },
 }
 
 for _, lsp in pairs(lsps) do
