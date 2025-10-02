@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
     {'windwp/nvim-autopairs'},
-    {'ThePrimeagen/vim-be-good'},
 
     -- Html
     {'windwp/nvim-ts-autotag'},
@@ -22,9 +21,11 @@ local plugins = {
     -- Themes
     {'rose-pine/neovim', name = 'rose-pine'},
     {'ellisonleao/gruvbox.nvim'},
+    {'kdheepak/monochrome.nvim'},
+    {'metalelf0/black-metal-theme-neovim'},
     {'blazkowolf/gruber-darker.nvim'},
-    {'ilof2/posterpole.nvim'},
-    {'wtfox/jellybeans.nvim'},
+    -- {'ilof2/posterpole.nvim'},
+    -- {'wtfox/jellybeans.nvim'},
 
     {'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}},
 
