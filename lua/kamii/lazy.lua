@@ -14,22 +14,19 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
     {'windwp/nvim-autopairs'},
-
-    -- Html
     {'windwp/nvim-ts-autotag'},
-
-    -- Themes
-    {'rose-pine/neovim', name = 'rose-pine'},
-    {'ellisonleao/gruvbox.nvim'},
-    {'kdheepak/monochrome.nvim'},
-    {'metalelf0/black-metal-theme-neovim'},
-    {'blazkowolf/gruber-darker.nvim'},
-    -- {'ilof2/posterpole.nvim'},
-    -- {'wtfox/jellybeans.nvim'},
 
     {'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}},
 
+    -- Colors
+    { 'rose-pine/neovim', name = 'rose-pine'},
+    { 'ellisonleao/gruvbox.nvim' },
+    { 'blazkowolf/gruber-darker.nvim' },
+    { 'kdheepak/monochrome.nvim' },
+
     -- Lsp
+    {'mason-org/mason.nvim', opts = {}},
+    {'mason-org/mason-lspconfig.nvim', opts = {}},
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
     {'ray-x/lsp_signature.nvim'},
     {'neovim/nvim-lspconfig'},
@@ -44,5 +41,4 @@ local plugins = {
 }
 
 local opts = {}
-
 require("lazy").setup(plugins, opts)

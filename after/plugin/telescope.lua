@@ -7,9 +7,11 @@ require('telescope').setup {
         file_ignore_patterns = { "out", "build" }
     }
 }
-require('telescope')
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<Space>ft', builtin.find_files, {})
-vim.keymap.set('n', '<Space>fs', builtin.live_grep, {})
-vim.keymap.set('n', '<Space>fn', builtin.treesitter, {})
+vim.keymap.set('n', '<leader>ft', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fs', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fx', builtin.diagnostics, {})
+vim.keymap.set('n', '<leader>fn', builtin.treesitter, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>cc', builtin.colorscheme, {})

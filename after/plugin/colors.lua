@@ -2,13 +2,7 @@ function ColorMyPencils()
     require('rose-pine').setup{
         disable_background = true,
     }
-	-- vim.cmd.colorscheme('rose-pine')
-
-    require('black-metal').setup({
-        theme = 'emperor',
-        variant = 'light',
-    })
-    require("black-metal").load()
+	vim.cmd.colorscheme('monochrome')
 end
 
 ColorMyPencils()
