@@ -10,7 +10,7 @@ vim.diagnostic.config({
 require('lsp_signature').setup({
     floating_window = false,
     hint_enable = true,
-    hint_prefix = '> ',
+    hint_prefix = '',
     handler_opts = {border = 'none' },
 })
 
