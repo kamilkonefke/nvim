@@ -3,7 +3,6 @@ require('telescope').setup {
         fzf = {}
     },
     defaults = {
-        disable_devicons = true,
         file_ignore_patterns = { "out", "build" }
     }
 }

@@ -1,13 +1,13 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
-    'git',
-    'clone',
-    '--filter=blob:none',
-    'https://github.com/folke/lazy.nvim.git',
-    '--branch=stable', -- latest stable release
-    lazypath,
-  })
+    vim.fn.system({
+        'git',
+        'clone',
+        '--filter=blob:none',
+        'https://github.com/folke/lazy.nvim.git',
+        '--branch=stable', -- latest stable release
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -16,13 +16,11 @@ local plugins = {
     {'windwp/nvim-autopairs'},
     {'windwp/nvim-ts-autotag'},
 
-    {'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}},
-
     -- Colors
-    { 'rose-pine/neovim', name = 'rose-pine'},
-    { 'ellisonleao/gruvbox.nvim' },
-    { 'blazkowolf/gruber-darker.nvim' },
-    { 'kdheepak/monochrome.nvim' },
+    {'rose-pine/neovim', name = 'rose-pine'},
+    {'ellisonleao/gruvbox.nvim'},
+    {'blazkowolf/gruber-darker.nvim'},
+    {'kdheepak/monochrome.nvim'},
 
     -- Lsp
     {'mason-org/mason.nvim', opts = {}},
@@ -35,6 +33,15 @@ local plugins = {
     {'hrsh7th/nvim-cmp'},
     {'hrsh7th/cmp-path'},
     {'L3MON4D3/LuaSnip'},
+
+    -- Debugger
+    {'nvim-neotest/nvim-nio'},
+    {'mfussenegger/nvim-dap'},
+    {'jay-babu/mason-nvim-dap.nvim'},
+    {'theHamsta/nvim-dap-virtual-text'},
+    {'rcarriga/nvim-dap-ui'},
+    {'leoluz/nvim-dap-go'},
+    {'jay-babu/mason-nvim-dap.nvim'},
 
     -- Telescope
     {'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' }},
